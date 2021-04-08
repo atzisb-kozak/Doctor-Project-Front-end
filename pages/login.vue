@@ -57,23 +57,23 @@
 </style>
 
 <script>
- export default {
-    data: () => ({
+export default {
+  data: () => ({
 
-      Username: '',
-      usernameRules: [
-        v => !!v || 'Username is required',
-      ],
-      Password: '',
-      passwordRules: [
-        v => !!v || 'Password is required',
-      ]
-      }),
+    Username: '',
+    usernameRules: [
+      v => !!v || 'Username is required',
+    ],
+    Password: '',
+    passwordRules: [
+      v => !!v || 'Password is required',
+    ]
+  }),
       
-      methods: {
-      validate () {
-        this.$refs.form.validate()
-      }
- }
- }
+  methods: {
+    validate () {
+      this.$refs.form.validate();
+    }
+  }
+};
 </script>
