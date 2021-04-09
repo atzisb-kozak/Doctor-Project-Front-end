@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-main>
-            <v-card>
+            <v-card class="card"> 
                 <v-card-title class="title">
                     Login
                 </v-card-title>
@@ -53,6 +53,10 @@
 .title{
     margin-left: 45%;
     margin-bottom: 15px;
+}
+.card{
+  width: 500px;
+  margin-left: 35%;
 }
 </style>
 
