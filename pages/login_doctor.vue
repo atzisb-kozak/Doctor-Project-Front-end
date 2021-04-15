@@ -2,11 +2,9 @@
     <v-app>
         <v-main>
           <v-container fluid>
-            <v-card class="card" 
-            dark
-            width="500px"> 
+            <v-card class="card" dark > 
                 <v-card-title class="title">
-                    Login
+                    Log in Doctor
                 </v-card-title>
             <v-form class="log_form"
             ref="form"
@@ -50,18 +48,23 @@
 </template>
 
 <style scoped>
-.log_form{
-    margin-left: 1rem;
-    margin-right: 1rem;
+
+.log_form {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.title{
-    margin-left: 42.5%;
-    margin-bottom: 1.2rem;
+
+.title {
+  margin-left: 36%;
+  margin-bottom: 1.2rem;
 }
-.card{
+
+.card {
+  width: 500px;
   margin-left: 32.5%;
   margin-top: 8%;
 }
+
 </style>
 
 <script>
