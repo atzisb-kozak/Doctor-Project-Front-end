@@ -1,6 +1,7 @@
 <template>
   <v-app>
     
+    
     <v-parallax
     dark
     height="560"
@@ -24,6 +25,16 @@
             Vous ne vous sentez pas bien ? 
             Consultez avec l'un de nos médecins !
           </h4>
+          
+          <v-btn
+          class="green--text mt-3"
+          dark
+          rounded
+          outlined
+          elevation="5"
+          >
+            Faites vous aider maintenant !
+          </v-btn>
       
         </v-col>
       </v-row>
@@ -106,39 +117,90 @@
       </v-col>
     </v-row>
 
-    <v-parallax
-    class="mt-9"
-    height="560"
-    src="/doctors3.jpg"
+    <v-carousel
+    class="mt-10"
+    height="550"
+    cycle
+    hide-delimiters
     >
-    
-      <v-row
-      align="center"
-      justify="center"
+      <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="slide-x-reverse-transition"
+      transition="slide-x-transition"
       >
-
-        <v-col
-        class="text-center"
+        <v-row
+        class="fill-height"
+        align="center"
+        justify="center"
         >
-          <h1 class="display-1 font-weight-bold mb-4">
-            Malade ? Vous ne savez pas ce que c'est ?
-          </h1>
-      
-          <v-btn
-          class="green--text"
-          dark
-          rounded
-          outlined
-          color="#00000"
-          elevation="5"
+          <v-col
+          class="text-center"
+          v-if="i == 0"
           >
-            Faites vous aider maintenant !
-          </v-btn>
-      
-        </v-col>
-      </v-row>
+            <div class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 8px black;"
+            >
+              Pas encore inscrit sur notre site ?
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/register">Faites le dés maintenant !</NuxtLink>
+            </v-btn>
+          </v-col>
 
-    </v-parallax>
+          <v-col
+          class="text-center"
+          v-if="i == 1"
+          >
+          <div class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 8px black;"
+            >
+              Des questions, Des problémes, au sujet de votre santé ?
+            </div>
+            <div class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;">
+              Une examination constituer de questions/réponses est là pour vous aider
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/">Accéder a l'examination</NuxtLink>
+            </v-btn>
+          </v-col>
+
+          <v-col
+          class="text-center"
+          v-if="i == 2"
+          >
+          <div class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 5px black;"
+            >
+              Un doute sur ce que vous avez ? Vous ne savez ce que c'est ?
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/">Contactez l'un de nos medecins !</NuxtLink>
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-carousel-item>
+    </v-carousel>
   </v-app>
 </template>
 
@@ -149,5 +211,24 @@ h1{
 .subheading{
   color:black;
 }
-
 </style>
+
+<script>
+export default {
+  data () {
+    return {
+      items: [
+        {
+          src: 'connexion.jpg',
+        },
+        {
+          src: 'question.jpg',
+        },
+        {
+          src: 'doctors7.jpg',
+        },
+      ],
+    };
+  },
+};
+</script>

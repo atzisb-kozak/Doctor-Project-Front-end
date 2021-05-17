@@ -4,7 +4,7 @@
           <v-container fluid>
             <v-card class="card" dark > 
                 <v-card-title class="title">
-                    Log in Doctor
+                    Connectez-vous Docteur
                 </v-card-title>
             <v-form class="log_form"
             ref="form"
@@ -14,7 +14,7 @@
                 <v-text-field
                     v-model="Username"
                     :rules="usernameRules"
-                    label="Username"
+                    label="Pseudo"
                     required
                     outlined
                 
@@ -23,7 +23,7 @@
                     <v-text-field
                     v-model="Password"
                     :rules="passwordRules"
-                    label="Password"
+                    label="Mot de passe"
                     required
                     outlined
                     ></v-text-field>
@@ -38,7 +38,7 @@
                     </v-btn>
             </v-form>
             <v-card-text>
-            <p>Not registered yet ? <nuxt-link to="/register">Register here</nuxt-link></p>
+            <p>Pas encore inscrit ? <nuxt-link to="/register">Inscrivez-vous ici</nuxt-link></p>
             </v-card-text>
             </v-card>
           </v-container>
@@ -55,7 +55,7 @@
 }
 
 .title {
-  margin-left: 36%;
+  margin-left: 25%;
   margin-bottom: 1.2rem;
 }
 

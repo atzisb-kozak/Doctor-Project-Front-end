@@ -1,10 +1,14 @@
 <template>
     <v-app>
         <v-main>
-            <v-card>
-                <v-card-title class="title">
-                    Register
-                </v-card-title>
+          <v-container fluid
+          style="margin-top: 4rem">
+            <v-card 
+            dark
+            >
+              <v-card-title class="title">
+                  Inscription
+              </v-card-title>
             <v-form class="reg_form"
             ref="form"
             v-model="valid"
@@ -19,7 +23,7 @@
                 <v-text-field
                     v-model="Firstname"
                     :rules="firstnameRules"
-                    label="First name"
+                    label="Prénom"
                     required
                     outlined
                 ></v-text-field>
@@ -32,7 +36,7 @@
                 <v-text-field
                     v-model="Lastname"
                     :rules="lastnameRules"
-                    label="Last name"
+                    label="Nom"
                     required
                     outlined
                 ></v-text-field>
@@ -45,7 +49,7 @@
                 <v-text-field
                     v-model="Username"
                     :rules="usernameRules"
-                    label="Username"
+                    label="Pseudo"
                     required
                     outlined
                 ></v-text-field>
@@ -64,7 +68,7 @@
                     <v-text-field
                     v-model="Password"
                     :rules="passwordRules"
-                    label="Password"
+                    label="Mot de passe"
                     required
                     outlined
                     ></v-text-field>
@@ -72,7 +76,7 @@
                     <v-text-field
                     v-model="ConfirmPassword"
                     :rules="confirmpasswordRules"
-                    label="Confirm Password"
+                    label="Confirmer Mot de passe"
                     required
                     outlined
                     ></v-text-field>
@@ -89,6 +93,7 @@
             <p>Not registered yet ? <nuxt-link to="/register">Register here</nuxt-link></p>
             </v-card-text>
             </v-card>
+          </v-container>
         </v-main>
     </v-app>
 

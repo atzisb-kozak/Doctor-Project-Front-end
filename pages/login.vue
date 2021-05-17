@@ -1,52 +1,64 @@
 <template>
-    <v-app>
-        <v-main>
-          <v-container fluid>
-            <v-card class="card" 
-            dark
-            width="500px"> 
-                <v-card-title class="title">
-                    Login
-                </v-card-title>
-            <v-form class="log_form"
+  <v-app>
+      
+    <v-main>
+        
+      <v-container fluid>
+          
+        <v-card 
+          class="card" 
+          dark
+          width="500px"
+          > 
+            
+          <v-card-title class="title">
+            Connexion
+          </v-card-title>
+            
+          <v-form 
+            class="log_form"
             ref="form"
             v-model="valid"
             lazy-validation
             >
-                <v-text-field
-                    v-model="Username"
-                    :rules="usernameRules"
-                    label="Username"
-                    required
-                    outlined
-                
-                    ></v-text-field>    
 
-                    <v-text-field
-                    v-model="Password"
-                    :rules="passwordRules"
-                    label="Password"
-                    required
-                    outlined
-                    ></v-text-field>
+            <v-text-field
+              v-model="Username"
+              :rules="usernameRules"
+              label="Pseudo"
+              required
+              outlined
+            >
+            </v-text-field>    
+              
+            <v-text-field
+            v-model="Password"
+            :rules="passwordRules"
+            label="Mot de passe"
+            required
+            outlined
+            >
+            </v-text-field>
+              
+            <v-btn
+            :disabled="!valid"
+            color="success"
+            class="mr-4"
+            @click="validate"
+            >
+              Validate
+            </v-btn>
 
-                    <v-btn
-                    :disabled="!valid"
-                    color="success"
-                    class="mr-4"
-                    @click="validate"
-                    >
-                    Validate
-                    </v-btn>
-            </v-form>
-            <v-card-text>
-            <p>Not registered yet ? <nuxt-link to="/register">Register here</nuxt-link></p>
-            </v-card-text>
-            </v-card>
-          </v-container>
-        </v-main>
-    </v-app>
+          </v-form>
+            
+          <v-card-text>
+            <p>Pas encore inscrit ? <nuxt-link to="/register">Inscrivez-vous ici</nuxt-link></p>
+          </v-card-text>
 
+        </v-card>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <style scoped>
@@ -55,7 +67,7 @@
     margin-right: 1rem;
 }
 .title{
-    margin-left: 42.5%;
+    margin-left: 36.5%;
     margin-bottom: 1.2rem;
 }
 .card{

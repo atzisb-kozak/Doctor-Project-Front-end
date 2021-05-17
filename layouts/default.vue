@@ -1,14 +1,16 @@
 <template>
   <v-app>
-
-   <v-toolbar
-    height="70"
+    
+   <v-app-bar
+    height="60"
       dense
-      dark>
-      <v-toolbar-title>Navigation</v-toolbar-title>
+      dark
+      fixed
+      >
+      <v-app-bar-title>Navigation</v-app-bar-title>
         <NuxtLink class="link" to="/">Accueil</NuxtLink>
-        <NuxtLink class="link" to="/login">Login</NuxtLink>
-        <NuxtLink class="link" to="/login_doctor">Doc Login</NuxtLink>
+        <NuxtLink class="link" to="/login">Connexion</NuxtLink>
+        <NuxtLink class="link" to="/login_doctor">Connexion Docteur</NuxtLink>
         <v-spacer></v-spacer>
         <v-switch class="theme_switch"
         v-model="$vuetify.theme.dark"
@@ -17,7 +19,7 @@
         label="Night Mode"
         persistent-hint
       ></v-switch>
-   </v-toolbar>
+   </v-app-bar>
 
     <v-main>
 
