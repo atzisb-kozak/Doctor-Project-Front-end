@@ -33,7 +33,7 @@
           outlined
           elevation="5"
           >
-            Faites vous aider maintenant !
+            <NuxtLink to="/">Faites vous aider maintenant !</NuxtLink>
           </v-btn>
       
         </v-col>
@@ -175,7 +175,7 @@
             rounded
             elevation="5"
             >
-            <NuxtLink to="/">Accéder a l'examination</NuxtLink>
+            <NuxtLink to="/bot">Accéder a l'examination</NuxtLink>
             </v-btn>
           </v-col>
 

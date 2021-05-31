@@ -38,7 +38,8 @@
                     </v-btn>
             </v-form>
             <v-card-text>
-            <p>Pas encore inscrit ? <nuxt-link to="/register">Inscrivez-vous ici</nuxt-link></p>
+            <p>Pas encore inscrit ? <nuxt-link to="/register_doctor">
+            Inscrivez-vous ici</nuxt-link></p>
             </v-card-text>
             </v-card>
           </v-container>
@@ -62,7 +63,6 @@
 .card {
   width: 500px;
   margin-left: 32.5%;
-  margin-top: 8%;
 }
 
 </style>

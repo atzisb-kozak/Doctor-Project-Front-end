@@ -72,7 +72,6 @@
 }
 .card{
   margin-left: 32.5%;
-  margin-top: 8%;
 }
 </style>
 

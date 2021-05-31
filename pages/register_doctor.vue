@@ -6,7 +6,7 @@
             dark
             >
               <v-card-title class="title">
-                  Inscription
+                  Inscription Docteur
               </v-card-title>
             <v-form class="reg_form"
             ref="form"
@@ -101,7 +101,7 @@
     margin-right: 10px;
 }
 .title{
-    margin-left: 45%;
+    margin-left: 40%;
     margin-bottom: 15px;
 }
 </style>
