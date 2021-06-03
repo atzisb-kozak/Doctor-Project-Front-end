@@ -72,7 +72,8 @@
               justify="center"
               class="mt-2"
             >
-              <p>Pas encore inscrit ? <nuxt-link to="/register">Inscrivez-vous ici</nuxt-link></p>
+              <p>Pas encore inscrit ? 
+                <nuxt-link to="/register_doctor">Inscrivez-vous ici</nuxt-link></p>
             </v-row>
           </v-card-text>
         </v-card>

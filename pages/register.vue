@@ -1,102 +1,130 @@
 <template>
-    <v-app>
-        <v-main>
-          <v-container fluid>
-            <v-card 
-            dark
-            >
-              <v-card-title class="title">
-                  Inscription
-              </v-card-title>
-            <v-form class="reg_form"
-            ref="form"
-            v-model="valid"
-            lazy-validation
-            >
-
-            <v-row>
-                <v-col
-                cols="12"
-                md="4"
-                >
-                <v-text-field
-                    v-model="Firstname"
-                    :rules="firstnameRules"
-                    label="Prénom"
-                    required
-                    outlined
-                ></v-text-field>
-                </v-col>
-
-                <v-col
-                cols="12"
-                md="4"
-                >
-                <v-text-field
-                    v-model="Lastname"
-                    :rules="lastnameRules"
-                    label="Nom"
-                    required
-                    outlined
-                ></v-text-field>
-                </v-col>
-
-                <v-col
-                cols="12"
-                md="4"
-                >
-                <v-text-field
-                    v-model="Username"
-                    :rules="usernameRules"
-                    label="Pseudo"
-                    required
-                    outlined
-                ></v-text-field>
-                </v-col>
+  <v-app>
+    <v-main>
+      <v-container fill-height fluid>
+        <v-card 
+          class="card rounded-xl mx-auto justify-center"
+          dark
+          width="500px"
+        >
+          <v-row align="center" justify="center">
+            <v-card-title class="mt-2 mb-2">
+              Inscription
+            </v-card-title>
+          </v-row>
+          <v-form class="reg_form"
+          ref="form"
+          v-model="valid"
+          lazy-validation
+          >
+          <v-row
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Firstname"
+              :rules="firstnameRules"
+              label="Prénom"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+          <v-row
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Lastname"
+              :rules="lastnameRules"
+              label="Nom"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+          <v-row
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Username"
+              :rules="usernameRules"
+              label="Pseudo"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+          <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Email"
+              :rules="emailRules"
+              label="Email"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+          <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Password"
+              :rules="passwordRules"
+              label="Mot de passe"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+          <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="ConfirmPassword"
+              :rules="confirmpasswordRules"
+              label="Confirmer Mot de passe"
+              class="rounded-pill"
+              required
+              outlined
+              ></v-text-field>
             </v-row>
-
-                <v-text-field
-                    v-model="Email"
-                    :rules="emailRules"
-                    label="Email"
-                    required
-                    outlined
-                
-                    ></v-text-field>    
-
-                    <v-text-field
-                    v-model="Password"
-                    :rules="passwordRules"
-                    label="Mot de passe"
-                    required
-                    outlined
-                    ></v-text-field>
-
-                    <v-text-field
-                    v-model="ConfirmPassword"
-                    :rules="confirmpasswordRules"
-                    label="Confirmer Mot de passe"
-                    required
-                    outlined
-                    ></v-text-field>
-
-                    <v-btn
-                    color="success"
-                    class="mr-4 mb-5"
-                    v-on:click="validate()"
-                    >
-                    Validate
-                    </v-btn>
-            </v-form>
-            </v-card>
-          </v-container>
-        </v-main>
-    </v-app>
-
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-btn
+                color="success"
+                class="mr-4 mb-5 rounded-pill"
+                v-on:click="validate()"
+              >
+                Validate
+              </v-btn>
+            </v-row>
+            <v-card-text>
+              <v-row
+                align="center"
+                justify="center"
+                class="mt-2"
+              >
+                <p>Déjà inscrit ? <a @click="back">Connectez-Vous</a></p>
+            </v-row>
+          </v-card-text>
+          </v-form>
+        </v-card>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <style>
-.reg_form{
+.reg_form {
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -142,7 +170,11 @@ export default {
   methods : {
     validate(){
       this.$router.push('login');
+    },
+    back() {
+      this.$router.go(-1);
     }
-  }
+  },
+  layout : 'nolayout'
 };
 </script>
