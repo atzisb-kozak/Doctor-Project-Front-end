@@ -73,7 +73,7 @@
               class="mt-2"
             >
               <p>Pas encore inscrit ? 
-                <nuxt-link to="/register_doctor">Inscrivez-vous ici</nuxt-link></p>
+                <nuxt-link to="/doctor_register">Inscrivez-vous ici</nuxt-link></p>
             </v-row>
           </v-card-text>
         </v-card>

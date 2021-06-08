@@ -5,7 +5,7 @@
     <v-parallax
     dark
     height="560"
-    src="/fond.jpg"
+    src="/images/fond.jpg"
     >
     
       <v-row
@@ -72,7 +72,7 @@
           <v-img
           
           class="ml-auto mt-8 align-center"
-          src="/doctors.jpg"
+          src="/images/doctors.jpg"
           aspect-ratio="1.8"
           >
           </v-img>
@@ -87,7 +87,7 @@
 
         <v-img
           class="mr-auto mt-10"
-          src="/doctors2.jpg"
+          src="/images/doctors2.jpg"
           max-height="400"
           max-width="600">
         </v-img>
@@ -95,6 +95,8 @@
       </v-col>
 
       <v-col align-self="center">
+
+        
         
         <v-card
         class="d-flex align-center mt-5"
@@ -144,6 +146,13 @@
             >
               Pas encore inscrit sur notre site ?
             </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Inscrivez-vous et accédez à une aide médical d'exception.
+            </div>
         
             <v-btn
             class="green--text mt-3"
@@ -183,10 +192,19 @@
           class="text-center"
           v-if="i == 2"
           >
-          <div class="display-2 font-weight-thin"
+            <div 
+            class="display-2 font-weight-thin"
             style="text-shadow: 0 0 5px black;"
             >
               Un doute sur ce que vous avez ? Vous ne savez ce que c'est ?
+            </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Contactez l'un de nos médecins, il vous aidera a trouver votre probléme dans le plus
+              bref délai.
             </div>
         
             <v-btn
@@ -195,10 +213,41 @@
             rounded
             elevation="5"
             >
-            <NuxtLink to="/">Contactez l'un de nos medecins !</NuxtLink>
+              <NuxtLink to="/">Contactez l'un de nos medecins !</NuxtLink>
             </v-btn>
+            
           </v-col>
-        </v-row>
+
+          <v-col
+          class="text-center"
+          v-if="i == 3"
+          >
+          
+            <div 
+            class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 5px black;"
+            >
+              Vous êtes l'un de nos medecins ?
+            </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Connectez-vous, accédez à votre profil et gérer votre agenda.
+            </div>
+
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/doctor_login">Connectez-vous</NuxtLink>
+          </v-btn>
+
+        </v-col>
+      </v-row>
       </v-carousel-item>
     </v-carousel>
   </v-app>
@@ -219,13 +268,16 @@ export default {
     return {
       items: [
         {
-          src: 'connexion.jpg',
+          src: '/images/connexion.jpg',
         },
         {
-          src: 'question.jpg',
+          src: '/images/question.jpg',
         },
         {
-          src: 'doctors7.jpg',
+          src: '/images/doctors7.jpg',
+        },
+        {
+          src: 'images/doctors8.jpg',
         },
       ],
     };

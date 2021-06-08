@@ -11,8 +11,6 @@
       <v-app-bar-title>Navigation</v-app-bar-title>
         <NuxtLink class="link" to="/">Accueil</NuxtLink>
         <NuxtLink class="link" to="/login">Connexion</NuxtLink>
-        <NuxtLink class="link" to="/login_doctor">Connexion Docteur</NuxtLink>
-        <Nuxt-link class="link" to="/page_doctor">Espace Docteur</Nuxt-link>
         <v-spacer></v-spacer>
         <v-switch class="theme_switch"
         v-model="$vuetify.theme.dark"

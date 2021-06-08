@@ -74,12 +74,15 @@
             class="ml-2 mr-2"
           >
             <v-text-field
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show ? 'text' : 'password'"
               v-model="Password"
               :rules="passwordRules"
               label="Mot de passe"
               class="rounded-pill"
               required
               outlined
+              @click:append="show = !show"
             ></v-text-field>
           </v-row>
           <v-row 
@@ -87,12 +90,15 @@
             class="ml-2 mr-2"
           >
             <v-text-field
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show ? 'text' : 'password'"
               v-model="ConfirmPassword"
               :rules="confirmpasswordRules"
               label="Confirmer Mot de passe"
               class="rounded-pill"
               required
               outlined
+              @click:append="show = !show"
               ></v-text-field>
             </v-row>
             <v-row
@@ -144,6 +150,7 @@ export default {
       Email: '',
       Password: '',
       ConfirmPassword: '',
+      show: false,
       
       firstnameRules: [
         v => !!v || 'First name is required'
