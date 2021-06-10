@@ -12,13 +12,16 @@
         <NuxtLink class="link" to="/">Accueil</NuxtLink>
         <NuxtLink class="link" to="/login">Connexion</NuxtLink>
         <v-spacer></v-spacer>
-        <v-switch class="theme_switch"
-        v-model="$vuetify.theme.dark"
-        inset
-        dense
-        label="Night Mode"
-        persistent-hint
-      ></v-switch>
+        <v-col
+        cols="1">
+          <v-switch class="mt-4 theme_switch"
+          v-model="$vuetify.theme.dark"
+          inset
+          dense
+          label="Night Mode"
+          persistent-hint>
+          </v-switch>
+        </v-col>
    </v-app-bar>
 
     <v-main>

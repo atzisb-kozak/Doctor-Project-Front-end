@@ -11,8 +11,10 @@
     <v-menu
     rounded="1"
     offset-y
-    min-width="200px">
-    <template v-slot:activator="{ on }">
+    min-width="200px"
+    >
+    <template 
+    v-slot:activator="{ on }">
       <v-btn
       icon
       v-on="on">
@@ -25,21 +27,22 @@
     </template>
     <v-card>
           <v-list-item-content class="justify-center">
-
             <div class="mx-auto text-center">
 
               <v-avatar
               color="primary"
               size="46">
-
                 <span class="text-h5">{{ user.initials }}</span>
-
               </v-avatar>
 
-              <h3>{{ user.fullName }}</h3>
+              <h3>
+                {{ user.fullName }}
+              </h3>
+
               <p class="text-caption mt-1">
                 {{ user.email }}
               </p>
+
               <v-divider class="my-3"></v-divider>
               <v-btn
                 depressed
@@ -54,21 +57,30 @@
         </v-card>
     </v-menu>
         <NuxtLink class="link" to="/patient/patient_index">Accueil</NuxtLink>
-        <NuxtLink class="link" to="/patient/patient_profile">Profil</NuxtLink>
+        <NuxtLink class="link" to="/patient/patient_profile">Profile</NuxtLink>
         <NuxtLink class="link" to="/patient/patient_rdv">Rendez-vous</NuxtLink>
         <NuxtLink class="link" to="/bot">Assistant</NuxtLink>
 
         <v-spacer></v-spacer>
-        <v-switch class="theme_switch"
-        v-model="$vuetify.theme.dark"
-        inset
-        dense
-        label="Night Mode"
-        persistent-hint
-      ></v-switch>
+       <v-col
+        cols="1">
+          <v-switch class="mt-4 theme_switch"
+          v-model="$vuetify.theme.dark"
+          inset
+          dense
+          label="Night Mode"
+          persistent-hint>
+          </v-switch>
+        </v-col>
    </v-app-bar>
+    <v-main>
 
-     <v-footer padless>
+      <!-- If using vue-router -->
+      <router-view></router-view>
+
+    </v-main>
+
+    <v-footer padless>
     <v-col
       class="text-center"
       cols="12"

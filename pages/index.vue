@@ -95,8 +95,6 @@
       </v-col>
 
       <v-col align-self="center">
-
-        
         
         <v-card
         class="d-flex align-center mt-5"

@@ -9,6 +9,7 @@ export default {
   data(){
 
   },
+  layout : 'patient_layout'
 };
 </script>
 

@@ -7,7 +7,6 @@
     >
       Bienvenue Docteur
     </v-row>
-
     
   </v-app>
 </template>
