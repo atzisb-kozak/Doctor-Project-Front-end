@@ -63,11 +63,44 @@
           </v-row>
 
           <v-row>
-            <v-col align-self="center">
+            <v-col>
               <v-card>
                 <v-card-title class="justify-center">
                   Assistant
                 </v-card-title>
+
+              <v-container>
+                <v-app>
+                  <v-card>
+
+                    <v-app-bar>
+                      <v-app-bar-title>
+                        Chat
+                      </v-app-bar-title>
+                    </v-app-bar>
+
+                    
+                    
+                    <v-row justify="end">
+                      <v-container>
+                      <v-col>
+                        <v-text-field
+                        v-model="msg"
+                        label="Message"
+                        type="text"
+                        clearable
+                        clear-icon="mdi-close-circle"
+                        append-outer-icon="mdi-send"
+                        @click:append-outer="sendmsg">
+                        </v-text-field>
+                      </v-col>
+                      </v-container>
+                    </v-row>
+
+                  </v-card>
+                </v-app>
+              </v-container>
+
               </v-card>
             </v-col>
           </v-row>
@@ -81,16 +114,20 @@
 
 <script>
 export default {
-  data(){
-    return {
-      user:{
-        initials: 'QS',
-        fullName: 'Quentin SAM-LONG',
-        email: 'test@test.com',
-        sex: 'M',
-        ID: '2662951',
-      },
-    };
+  data: () => ({
+    user:{
+      initials: 'QS',
+      fullName: 'Quentin SAM-LONG',
+      email: 'test@test.com',
+      sex: 'M',
+      ID: '2662951',
+    },
+    
+  }),
+  methods:{
+    sendmsg() {
+      this.msg='';
+    } 
   },
   layout : 'patient_layout'
 };
