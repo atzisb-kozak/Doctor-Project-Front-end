@@ -25,7 +25,7 @@
         <v-container fluid>
           <v-row>
 
-            <v-col align-self="left">
+            <v-col>
 
               <v-card class="mx-auto">
                 <v-card-title class="font-weight-light">
@@ -49,16 +49,56 @@
 
             </v-col>
 
-            <v-col align-self="right">
+            <v-col>
 
-              <v-card class="mx-auto" min-width="100px">
-                <v-card-title class="font-weight-light">
-                  Rendez-vous
-                </v-card-title>
-                <v-calendar-weekly>
-                </v-calendar-weekly>
-              </v-card>
-              
+                <v-card>
+                  <v-card-title>
+                      Rendez-vous
+                  </v-card-title>
+                  <v-container>
+                  <v-app-bar elevation="0">
+
+                    <v-btn
+                    fab
+                    text
+                    small
+                    color="grey darken-2"
+                    @click= prev
+                    >
+                      <v-icon small>
+                        mdi-chevron-left
+                      </v-icon>
+                    </v-btn>
+
+                    <v-btn
+                    fab
+                    text
+                    small
+                    color="grey darken-2"
+                    @click= next
+                    >
+                      <v-icon small>
+                        mdi-chevron-right
+                      </v-icon>
+                    </v-btn>
+
+                    <v-app-bar-title v-if="$refs.calendar">
+                      {{$refs.calendar.title}}
+                    </v-app-bar-title>
+
+                  </v-app-bar>
+
+                  <v-sheet height="350px">
+                    <v-calendar
+                    v-model="focus"
+                    ref="calendar"
+                    type="week"
+                    >
+                    </v-calendar>
+                  </v-sheet>
+                  </v-container>
+
+                </v-card>
             </v-col>
           </v-row>
 
@@ -85,13 +125,12 @@
                       <v-container>
                       <v-col>
                         <v-text-field
-                        v-model="msg"
                         label="Message"
                         type="text"
                         clearable
                         clear-icon="mdi-close-circle"
                         append-outer-icon="mdi-send"
-                        @click:append-outer="sendmsg">
+                        > 
                         </v-text-field>
                       </v-col>
                       </v-container>
@@ -115,6 +154,9 @@
 <script>
 export default {
   data: () => ({
+
+    focus:'',
+
     user:{
       initials: 'QS',
       fullName: 'Quentin SAM-LONG',
@@ -122,12 +164,22 @@ export default {
       sex: 'M',
       ID: '2662951',
     },
+
+
     
   }),
+  mounted () {
+    this.$refs.calendar.move(1);
+  },
+
+
   methods:{
-    sendmsg() {
-      this.msg='';
-    } 
+    prev() {
+      this.$refs.calendar.prev();
+    },
+    next(){
+      this.$refs.calendar.next();
+    },
   },
   layout : 'patient_layout'
 };
