@@ -1,11 +1,11 @@
 <template>
-  <v-app>
-    
-  </v-app>
+  <assistant></assistant>
 </template>
 
 <script>
+import assistant from '../components/assistant.vue';
 export default {
+  components: { assistant },
   data(){
 
   },

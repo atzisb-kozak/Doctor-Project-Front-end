@@ -1,13 +1,12 @@
 <template>
-  <v-app>
-
-  </v-app>
+  <profile></profile>
 </template>
 
 <script>
+import Profile from '../../components/profile.vue';
 export default {
-  data(){
-
+  components:{
+    Profile
   },
   layout : 'patient_layout'
 };

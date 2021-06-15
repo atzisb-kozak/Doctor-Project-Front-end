@@ -1,16 +1,13 @@
 <template>
-  <v-app>
-    
-  </v-app>
+  <rdv></rdv>
 </template>
 
 <script>
+import rdv from '../../components/rdv.vue';
 export default {
-  data(){
-
-  },
-  layout : 'patient_layout'
+  components: { rdv },
 };
+
 </script>
 
 <style>
