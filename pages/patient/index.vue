@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-card height="80px" elevation="5">
+      <v-card height="80px" elevation="2">
 
         <v-row
         justify="center"
@@ -21,7 +21,9 @@
           <v-card-title class="display-1 font-weight-medium justify-center" >
             Dashboard
           </v-card-title>
-
+          <v-col cols="15">
+          <v-divider></v-divider>
+          </v-col>
           <v-container fluid>
 
             <v-row>
@@ -52,8 +54,8 @@
 </template>
 
 <script>
-import profile from '../../components/profile.vue';
-import rdv from '../../components/rdv.vue';
+import profile from '../../components/profile_patient.vue';
+import rdv from '../../components/rdv_patient.vue';
 import assistant from '../../components/assistant.vue';
 
 export default {

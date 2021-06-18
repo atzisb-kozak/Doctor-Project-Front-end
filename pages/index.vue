@@ -48,7 +48,7 @@
         
           <v-card
           class="d-flex align-center mx-auto mt-4 "
-          elevation="0"
+          elevation="2"
           width="550"
           >
         
@@ -99,14 +99,14 @@
         <v-card
         class="d-flex align-center mt-5"
         width="550"
-        elevation="0"
+        elevation="2"
         >
 
           <v-card-title>
             Que faisons-nous ?
           </v-card-title>
 
-          <v-card-text class="d-flex justify-center mt-3" >
+          <v-card-text class="d-flex justify-center mt-3">
             Nous apportons notre soutient de par ce site en proposant des aides aux personnes
             ayant des problémes medicales, Le site propose des rendez-vous avec des médecins
             ou encore une examination constituer de Questions/Réponses afin d'identifier votre
@@ -173,7 +173,8 @@
             </div>
             <div class="subheading mt-2"
             style="color: white;text-shadow: 0 0 8px black;">
-              Une examination constituer de questions/réponses est là pour vous aider
+              Une examination constituer de questions/réponses est là pour vous aider.
+              Besoin d'être Connectez pour y avoir accés.
             </div>
         
             <v-btn
@@ -182,7 +183,7 @@
             rounded
             elevation="5"
             >
-            <NuxtLink to="/bot">Accéder a l'examination</NuxtLink>
+            <NuxtLink to="/patient/bot">Accéder a l'examination</NuxtLink>
             </v-btn>
           </v-col>
 
@@ -202,7 +203,7 @@
             style="color: white;text-shadow: 0 0 8px black;"
             >
               Contactez l'un de nos médecins, il vous aidera a trouver votre probléme dans le plus
-              bref délai.
+              bref délai.Connexion requise !
             </div>
         
             <v-btn
@@ -241,7 +242,7 @@
             rounded
             elevation="5"
             >
-            <NuxtLink to="/doctor_login">Connectez-vous</NuxtLink>
+            <NuxtLink to="/doctors/doctor_login">Connectez-vous</NuxtLink>
           </v-btn>
 
         </v-col>

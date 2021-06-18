@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import assistant from '../components/assistant.vue';
+import assistant from '../../components/assistant.vue';
 export default {
   components: { assistant },
-  data(){
+  data: () => ({
 
-  },
+  }),
   layout : 'patient_layout'
 };
 </script>

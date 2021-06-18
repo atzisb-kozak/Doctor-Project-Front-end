@@ -56,10 +56,13 @@
           </v-list-item-content>
         </v-card>
     </v-menu>
-        <NuxtLink class="link" to="/patient/patient_index">Accueil</NuxtLink>
-        <NuxtLink class="link" to="/patient/patient_profile">Profile</NuxtLink>
-        <NuxtLink class="link" to="/patient/patient_rdv">Rendez-vous</NuxtLink>
-        <NuxtLink class="link" to="/bot">Assistant</NuxtLink>
+        <NuxtLink class="mr-10 ml-10" to="/patient/">Accueil</NuxtLink>
+        <v-divider vertical></v-divider>
+        <NuxtLink class="mr-10 ml-10" to="/patient/patient_profile">Profile</NuxtLink>
+        <v-divider vertical></v-divider>
+        <NuxtLink class="mr-10 ml-10" to="/patient/patient_rdv">Rendez-vous</NuxtLink>
+        <v-divider vertical></v-divider>
+        <NuxtLink class="mr-10 ml-10" to="/patient/bot">Assistant</NuxtLink>
 
         <v-spacer></v-spacer>
        <v-col
@@ -111,9 +114,5 @@ export default {
 </script>
 
 <style>
-  .link
-  {
-    margin-left: 3rem;
-    font-size: 1rem;
-  }
+
 </style>

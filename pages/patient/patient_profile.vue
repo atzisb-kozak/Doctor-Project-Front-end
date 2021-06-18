@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Profile from '../../components/profile.vue';
+import Profile from '../../components/profile_patient.vue';
 export default {
   components:{
     Profile
