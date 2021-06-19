@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-card elevation="5">
-
-      <v-card-title class="justify-center">
-        Assistant
-      </v-card-title>
+      
+      <v-app-bar color="secondary">
+          <div style="font-size: 1.5rem">Assistant</div>
+      </v-app-bar>
 
       <v-container>
         <v-app>
@@ -14,7 +14,7 @@
             <v-app-bar>
 
               <v-app-bar-title>
-                Chat
+                <div style="font-size:1.5rem">Chat</div>
               </v-app-bar-title>
 
             </v-app-bar>

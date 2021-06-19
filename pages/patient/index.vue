@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-card height="80px" elevation="2">
+      <v-card height="80px" elevation="2" color="secondary">
 
         <v-row
         justify="center"

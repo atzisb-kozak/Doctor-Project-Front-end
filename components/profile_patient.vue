@@ -4,9 +4,9 @@
       <v-card class="mx-auto"
       elevation="3">
 
-        <v-card-title>
-          Profile
-        </v-card-title>
+        <v-app-bar color="secondary">
+            <div style="font-size: 1.5rem">Profile</div>
+        </v-app-bar>
 
         <v-divider ></v-divider>
         

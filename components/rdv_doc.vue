@@ -5,9 +5,9 @@
 
     <v-card>
 
-      <v-card-title>
-        Rendez-vous
-      </v-card-title>
+      <v-app-bar color="secondary">
+        <div style="font-size: 1.5rem">Rendez-vous</div>
+      </v-app-bar>
 
       <v-container>
 

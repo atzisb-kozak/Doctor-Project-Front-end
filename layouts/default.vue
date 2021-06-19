@@ -8,9 +8,10 @@
     app
     fixed
     >
-      <v-app-bar-title>Navigation</v-app-bar-title>
-        <NuxtLink class="link" to="/">Accueil</NuxtLink>
-        <NuxtLink class="link" to="/login">Connexion</NuxtLink>
+      <v-app-bar-title><div style="font-size:1.5rem">Navigation</div></v-app-bar-title>
+        <NuxtLink class="mr-10 ml-10" to="/">Accueil</NuxtLink>
+        <v-divider vertical></v-divider>
+        <NuxtLink class="mr-10 ml-10" to="/login">Connexion</NuxtLink>
         <v-spacer></v-spacer>
         <v-col
         cols="1">

@@ -1,7 +1,6 @@
 <template>
   <v-app>
     
-    
     <v-parallax
     dark
     height="560"

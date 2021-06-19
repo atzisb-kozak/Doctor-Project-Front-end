@@ -1,7 +1,12 @@
 <template>
   <v-app>
     <v-main>
-    <v-card height="80px" elevation="2">
+    <v-card
+    tile
+    height="80px" 
+    elevation="2"
+    color="secondary">
+      <!-- <v-img  height="80px" src="/images/sky.jpg"> -->
 
         <v-row
         justify="center"
@@ -12,10 +17,11 @@
         <v-row justify="center">
           <div class="subheading">Quoi de neuf docteur ?</div>
         </v-row>
-      </v-card>
+      <!-- </v-img> -->
+    </v-card>
     <v-container fluid>
 
-        <v-card class="" elevation="5">
+        <v-card elevation="5">
 
           <v-card-title class="display-1 font-weight-medium justify-center" >
             Dashboard

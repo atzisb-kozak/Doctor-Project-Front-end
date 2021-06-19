@@ -5,9 +5,9 @@
 
     <v-card>
 
-      <v-card-title>
-        Rendez-vous
-      </v-card-title>
+      <v-app-bar color="secondary">
+        <div style="font-size: 1.5rem">Rendez-vous</div>
+      </v-app-bar>
 
       <v-container>
 
@@ -58,6 +58,7 @@
           v-model="focus"
           ref="calendar"
           type="week"
+          :events="events"
           >
           </v-calendar>
         </v-sheet>
@@ -70,6 +71,13 @@
 <script>
 export default {
   data:() => ({
+    events:[
+      {
+        name: 'test',
+        start:'2021-06-21 10:00',
+        end:'2021-06-21 12:00',
+      },
+    ],
     focus:'',
   }),
   mounted () {
@@ -81,6 +89,9 @@ export default {
     },
     next(){
       this.$refs.calendar.next();
+    },
+    add(){
+      
     }
   },
   layout : 'patient_layout'
