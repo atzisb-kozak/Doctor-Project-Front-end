@@ -74,17 +74,12 @@
 
 <script>
 export default {
-  data: () => ({
 
-    user:{
-      initials: 'QS',
-      name: 'SAM-LONG',
-      firstname: 'Quentin',
-      username: 'Tset',
-      email: 'test@test.com',
-      password:'testpassword',
-      spec: 'chiurgien'
-    },
-  }),
+  props:{
+    user: {
+      type:Object,
+      default: () => ({})
+    }
+  },
 };
 </script>

@@ -1,6 +1,17 @@
 <template>
   <v-app>
-    <profile></profile>
+    <profile 
+    v-bind:user="{
+      initials:'MM',
+      name:'Martin',
+      firstname:'Matin',
+      spec:'Proctologue',
+      username:'Tarte tatin',
+      email:'m.matin@gmail.com',
+      password:'PommePoiré',
+      }"
+    >
+    </profile>
   </v-app>
 </template>
 

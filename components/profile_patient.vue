@@ -93,20 +93,12 @@
 
 <script>
 export default {
-  data: () => ({
+  props:{
+    user: {
+      type:Object,
+      default: () => ({})
+    }
+  },
 
-    user:{
-      initials: 'QS',
-      name: 'SAM-LONG',
-      firstname: 'Quentin',
-      email: 'test@test.com',
-      ID: '2662951',
-      username:'Tset',
-      password:'testpassword',
-      postal_code:'97441',
-      address:'19 rue kono dio da',
-      age:'20',
-    },
-  }),
 };
 </script>
