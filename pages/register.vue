@@ -56,6 +56,51 @@
               outlined
             ></v-text-field>
           </v-row>
+
+          <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Age"
+              :rules="ageRules"
+              label="Age"
+              type="number"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+
+           <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="Address"
+              :rules="addressRules"
+              label="Adresse"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+
+           <v-row 
+            align="center"
+            class="ml-2 mr-2"
+          >
+            <v-text-field
+              v-model="PostalCode"
+              :rules="postal_codeRules"
+              label="Code Postale"
+              type="number"
+              class="rounded-pill"
+              required
+              outlined
+            ></v-text-field>
+          </v-row>
+
           <v-row 
             align="center"
             class="ml-2 mr-2"
@@ -74,12 +119,15 @@
             class="ml-2 mr-2"
           >
             <v-text-field
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show ? 'text' : 'password'"
               v-model="Password"
               :rules="passwordRules"
               label="Mot de passe"
               class="rounded-pill"
               required
               outlined
+              @click:append="show = !show"
             ></v-text-field>
           </v-row>
           <v-row 
@@ -87,12 +135,15 @@
             class="ml-2 mr-2"
           >
             <v-text-field
+              :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+              :type="show ? 'text' : 'password'"
               v-model="ConfirmPassword"
               :rules="confirmpasswordRules"
               label="Confirmer Mot de passe"
               class="rounded-pill"
               required
               outlined
+              @click:append="show = !show"
               ></v-text-field>
             </v-row>
             <v-row
@@ -144,6 +195,7 @@ export default {
       Email: '',
       Password: '',
       ConfirmPassword: '',
+      show: false,
       
       firstnameRules: [
         v => !!v || 'First name is required'
@@ -153,6 +205,12 @@ export default {
       ],
       usernameRules: [
         v => !!v || 'Username is required',
+      ],
+      ageRules: [
+        v => !!v || 'Age is required',
+      ],
+      addressRules: [
+        v => !!v || 'Address is required'
       ],
       emailRules: [
         v => !!v || 'Email is required',

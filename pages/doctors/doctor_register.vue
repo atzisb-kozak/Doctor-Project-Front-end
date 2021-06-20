@@ -9,7 +9,7 @@
         >
           <v-row align="center" justify="center">
             <v-card-title class="mt-2 mb-2">
-              Inscription
+              Inscription Médecin
             </v-card-title>
           </v-row>
           <v-form class="reg_form"

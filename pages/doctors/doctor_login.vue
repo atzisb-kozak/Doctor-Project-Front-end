@@ -12,7 +12,7 @@
             justify="center"
           >
             <v-card-title class="mt-2 mb-2">
-              Connexion
+              Connexion Médecin
             </v-card-title>
           </v-row>
           <v-form
@@ -73,7 +73,7 @@
               class="mt-2"
             >
               <p>Pas encore inscrit ? 
-                <nuxt-link to="/register_doctor">Inscrivez-vous ici</nuxt-link></p>
+                <nuxt-link to="/doctors/doctor_register">Inscrivez-vous ici</nuxt-link></p>
             </v-row>
           </v-card-text>
         </v-card>

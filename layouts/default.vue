@@ -8,19 +8,21 @@
     app
     fixed
     >
-      <v-app-bar-title>Navigation</v-app-bar-title>
-        <NuxtLink class="link" to="/">Accueil</NuxtLink>
-        <NuxtLink class="link" to="/login">Connexion</NuxtLink>
-        <NuxtLink class="link" to="/login_doctor">Connexion Docteur</NuxtLink>
-        <Nuxt-link class="link" to="/page_doctor">Espace Docteur</Nuxt-link>
+      <v-app-bar-title><div style="font-size:1.5rem">Navigation</div></v-app-bar-title>
+        <NuxtLink class="mr-10 ml-10" to="/">Accueil</NuxtLink>
+        <v-divider vertical></v-divider>
+        <NuxtLink class="mr-10 ml-10" to="/login">Connexion</NuxtLink>
         <v-spacer></v-spacer>
-        <v-switch class="theme_switch"
-        v-model="$vuetify.theme.dark"
-        inset
-        dense
-        label="Night Mode"
-        persistent-hint
-      ></v-switch>
+        <v-col
+        cols="1">
+          <v-switch class="mt-4 theme_switch"
+          v-model="$vuetify.theme.dark"
+          inset
+          dense
+          label="Night Mode"
+          persistent-hint>
+          </v-switch>
+        </v-col>
    </v-app-bar>
 
     <v-main>
