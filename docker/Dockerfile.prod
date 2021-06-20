@@ -1,0 +1,13 @@
+FROM node:buster
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install --only=production
+
+EXPOSE 80
+
+CMD [ "npm", "run", "dev" ]
+
+

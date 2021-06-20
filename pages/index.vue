@@ -1,89 +1,284 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
+  <v-app>
+    
+    <v-parallax
+    dark
+    height="560"
+    src="/images/fond.jpg"
+    >
+    
+      <v-row
+      align="center"
+      justify="center"
+      >
+
+        <v-col
+        class="text-center"
+        cols="12"
+        >
+          <h1 class="display-1 font-weight-thin mb-4">
+            Bienvenue
+          </h1>
+      
+          <h4 class="subheading" >
+            Vous ne vous sentez pas bien ? 
+            Consultez avec l'un de nos médecins !
+          </h4>
+          
           <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
+          class="green--text mt-3"
+          dark
+          rounded
+          outlined
+          elevation="5"
           >
-            Continue
+            <NuxtLink to="/">Faites vous aider maintenant !</NuxtLink>
           </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+      
+        </v-col>
+      </v-row>
+    </v-parallax>
+
+    <v-main>
+
+      <v-row>
+      
+        <v-col align-self="center">
+        
+          <v-card
+          class="d-flex align-center mx-auto mt-4 "
+          elevation="2"
+          width="550"
+          >
+        
+            <v-card-title>
+              Qui sommes nous ?
+            </v-card-title>
+
+            <v-card-text class="d-flex justify-center mt-3">
+              Nous sommes un groupe indépendants présentant des services médicaux 
+              au personnes dans le besoin.
+              Nous avons mis en place ce site sur lequel vous êtes actuellement pour permettre,
+              à vous ou bien à d'autres de pouvoir accéder à tout moment au nombreux médecins de
+              notre plateforme afin de vous aider au mieux. 
+            </v-card-text>
+
+          </v-card>
+        </v-col>
+    
+        <v-col>
+          
+          <v-img
+          
+          class="ml-auto mt-8 align-center"
+          src="/images/doctors.jpg"
+          aspect-ratio="1.8"
+          >
+          </v-img>
+
+        </v-col>
+      </v-row>
+    </v-main>
+
+    <v-row>
+
+      <v-col>
+
+        <v-img
+          class="mr-auto mt-10"
+          src="/images/doctors2.jpg"
+          max-height="400"
+          max-width="600">
+        </v-img>
+
+      </v-col>
+
+      <v-col align-self="center">
+        
+        <v-card
+        class="d-flex align-center mt-5"
+        width="550"
+        elevation="2"
+        >
+
+          <v-card-title>
+            Que faisons-nous ?
+          </v-card-title>
+
+          <v-card-text class="d-flex justify-center mt-3">
+            Nous apportons notre soutient de par ce site en proposant des aides aux personnes
+            ayant des problémes medicales, Le site propose des rendez-vous avec des médecins
+            ou encore une examination constituer de Questions/Réponses afin d'identifier votre
+            probléme et trouver la meilleure approche pour vous.
+          </v-card-text>
+
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-carousel
+    class="mt-10"
+    height="550"
+    cycle
+    hide-delimiters
+    >
+      <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="slide-x-reverse-transition"
+      transition="slide-x-transition"
+      >
+        <v-row
+        class="fill-height"
+        align="center"
+        justify="center"
+        >
+          <v-col
+          class="text-center"
+          v-if="i == 0"
+          >
+            <div class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 8px black;"
+            >
+              Pas encore inscrit sur notre site ?
+            </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Inscrivez-vous et accédez à une aide médical d'exception.
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/register">Faites le dés maintenant !</NuxtLink>
+            </v-btn>
+          </v-col>
+
+          <v-col
+          class="text-center"
+          v-if="i == 1"
+          >
+          <div class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 8px black;"
+            >
+              Des questions, Des problémes, au sujet de votre santé ?
+            </div>
+            <div class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;">
+              Une examination constituer de questions/réponses est là pour vous aider.
+              Besoin d'être Connectez pour y avoir accés.
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/patient/bot">Accéder a l'examination</NuxtLink>
+            </v-btn>
+          </v-col>
+
+          <v-col
+          class="text-center"
+          v-if="i == 2"
+          >
+            <div 
+            class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 5px black;"
+            >
+              Un doute sur ce que vous avez ? Vous ne savez ce que c'est ?
+            </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Contactez l'un de nos médecins, il vous aidera a trouver votre probléme dans le plus
+              bref délai.Connexion requise !
+            </div>
+        
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+              <NuxtLink to="/">Contactez l'un de nos medecins !</NuxtLink>
+            </v-btn>
+            
+          </v-col>
+
+          <v-col
+          class="text-center"
+          v-if="i == 3"
+          >
+          
+            <div 
+            class="display-2 font-weight-thin"
+            style="text-shadow: 0 0 5px black;"
+            >
+              Vous êtes l'un de nos medecins ?
+            </div>
+
+            <div 
+            class="subheading mt-2"
+            style="color: white;text-shadow: 0 0 8px black;"
+            >
+              Connectez-vous, accédez à votre profil et gérer votre agenda.
+            </div>
+
+            <v-btn
+            class="green--text mt-3"
+            dark
+            rounded
+            elevation="5"
+            >
+            <NuxtLink to="/doctors/doctor_login">Connectez-vous</NuxtLink>
+          </v-btn>
+
+        </v-col>
+      </v-row>
+      </v-carousel-item>
+    </v-carousel>
+  </v-app>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
+<style scoped>
+h1{
+  color: black;
 }
+.subheading{
+  color:black;
+}
+</style>
+
+<script>
+export default {
+  data () {
+    return {
+      items: [
+        {
+          src: '/images/connexion.jpg',
+        },
+        {
+          src: '/images/question.jpg',
+        },
+        {
+          src: '/images/doctors7.jpg',
+        },
+        {
+          src: 'images/doctors8.jpg',
+        },
+      ],
+    };
+  },
+};
 </script>
